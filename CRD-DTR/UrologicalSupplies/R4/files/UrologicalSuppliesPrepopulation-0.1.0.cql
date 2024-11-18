@@ -8,7 +8,7 @@ codesystem "ICD-10": 'http://hl7.org/fhir/sid/icd-10'
 codesystem "ICD-10-CM": 'http://hl7.org/fhir/sid/icd-10-cm'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
-codesystem "HCPCS": 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+codesystem "HCPCS": 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
 
 valueset "Urinary Incontinence or Chronic Urinary Retention Disorder": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1219.70'
 valueset "Urinary Collection and Irrigation System Device or Supply": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1219.61'
@@ -31,7 +31,7 @@ define CurrentDiagnoses:
 
 define DeviceRequestHcpcsCoding: singleton from (
   ((cast device_request.code as CodeableConcept).coding) coding
-    where coding.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs')
+    where coding.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets')
 
 define DeviceRequested:
   if "DeviceRequestHcpcsCoding".code in "Urinary Collection and Irrigation System Device or Supply" then "DeviceRequestHcpcsCoding".code.value

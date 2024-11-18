@@ -156,14 +156,14 @@
           "answerOption": [
             {
               "valueCoding": {
-                "system": "https://bluebutton.cms.gov/resources/codesystem/hcpcs",
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0250",
                 "display": "E0250 Hospital bed, fixed height, with any type side rails, with mattress"
               }
             },
             {
               "valueCoding": {
-                "system": "https://bluebutton.cms.gov/resources/codesystem/hcpcs",
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0251",
                 "display": "E0251 Hospital bed, fixed height, with any type side rails, without mattress"
               }

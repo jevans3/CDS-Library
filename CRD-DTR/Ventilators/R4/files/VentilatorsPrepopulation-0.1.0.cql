@@ -20,7 +20,7 @@ define OtherDiagnoses:
 
 define DeviceRequestHcpcsCoding: singleton from (
   (device_request.code.coding) CODING
-    where CODING.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs')
+    where CODING.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets')
 
 define DeviceRequested:
   if "DeviceRequestHcpcsCoding".code in "Ventilator Device" then "DeviceRequestHcpcsCoding".code.value

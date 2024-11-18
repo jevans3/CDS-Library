@@ -13,7 +13,7 @@ include DTRHelpers version '0.1.0' called DTR
 codesystem "ICD-10-CM": 'http://hl7.org/fhir/sid/icd-10-cm'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
-codesystem "HCPCS": 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+codesystem "HCPCS": 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
 codesystem "FHIRRequestIntent": 'http://hl7.org/fhir/request-intent'
 
 // VALUE SETS
@@ -113,7 +113,7 @@ define "PulmonaryArteryPressure": CDS.HighestObservation(CDS.WithUnit(CDS.Verifi
 // Get Device Coding
 define DeviceRequestHcpcsCoding: singleton from (
   ((cast device_request.code as CodeableConcept).coding) coding
-    where coding.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+    where coding.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
     return FHIRHelpers."ToCode"(coding))
 
 // Device Categories

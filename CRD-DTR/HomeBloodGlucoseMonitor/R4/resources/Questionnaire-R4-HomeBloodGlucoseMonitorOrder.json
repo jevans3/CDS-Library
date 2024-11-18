@@ -487,7 +487,7 @@
               "question": "5.1",
               "operator": "=",
               "answerCoding": {
-                "system": "https://bluebutton.cms.gov/resources/codesystem/hcpcs",
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "version": "2020",
                 "code": "K0554",
                 "display": "Receiver (monitor), dedicated, for use with therapeutic glucose continuous monitor system"
@@ -497,7 +497,7 @@
               "question": "5.1",
               "operator": "=",
               "answerCoding": {
-                "system": "https://bluebutton.cms.gov/resources/codesystem/hcpcs",
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "version": "2020",
                 "code": "S1031",
                 "display": "Continuous noninvasive glucose monitoring device, rental, including sensor, sensor replacement, and download to monitor (for physician interpretation of data, use cpt code)"

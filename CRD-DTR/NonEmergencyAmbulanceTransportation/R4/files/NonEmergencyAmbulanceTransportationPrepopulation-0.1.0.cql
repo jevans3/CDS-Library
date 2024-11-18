@@ -13,7 +13,7 @@ context Patient
 
 define "ServiceRequestHcpcsCoding": singleton from (
   ((cast service_request.code as CodeableConcept).coding) coding
-    where coding.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+    where coding.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
     return FHIRHelpers.ToCode(coding))
 
 define NeatServiceRequested: 

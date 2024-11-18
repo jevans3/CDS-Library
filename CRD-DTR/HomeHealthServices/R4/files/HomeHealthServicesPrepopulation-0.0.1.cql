@@ -10,7 +10,7 @@ include DTRHelpers version '0.1.0' called DTR
 codesystem "ICD-10-CM": 'http://hl7.org/fhir/sid/icd-10-cm'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
-codesystem "HCPCS": 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+codesystem "HCPCS": 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
 
 
 parameter service_request ServiceRequest

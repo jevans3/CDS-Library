@@ -58,7 +58,7 @@ define RelevantDiagnoses:
 
 define DeviceRequestHcpcsCoding: singleton from (
   ((cast device_request.code as CodeableConcept).coding) coding
-    where coding.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs')
+    where coding.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets')
 
 define DeviceRequestDescription: 'HCPCS ' + "DeviceRequestHcpcsCoding".code.value + ' - ' + "DeviceRequestHcpcsCoding".display.value
 

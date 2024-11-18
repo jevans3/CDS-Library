@@ -5,7 +5,7 @@ include CDSConnectCommonsForFHIRv400 version '1.0.2' called CDS
 include DTRHelpers version '0.1.0' called DTR
 
 codesystem "LOINC": 'http://loinc.org'
-codesystem "HCPCS": 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+codesystem "HCPCS": 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
 
 //Motor Neuron Disease or Spinal Muscular Atrophy Disorder
 valueset "Neuromuscular Disease": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1219.44'

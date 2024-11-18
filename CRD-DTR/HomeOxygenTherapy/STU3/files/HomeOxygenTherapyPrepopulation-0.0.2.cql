@@ -12,7 +12,7 @@ include FHIRHelpers version '3.0.0' called FHIRHelpers
 codesystem "ICD-10-CM": 'http://hl7.org/fhir/sid/icd-10-cm'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
-codesystem "HCPCS": 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+codesystem "HCPCS": 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
 codesystem "FHIRRequestIntent": 'http://hl7.org/fhir/request-intent'
 
 //COPD_Codes
@@ -208,7 +208,7 @@ define "FrequencyOfUse":
 // device request info
 define "DeviceRequestHcpcsCoding": singleton from (
   ((cast device_request.code as CodeableConcept).coding) coding
-    where coding.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs')
+    where coding.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets')
 
 define "DeviceRequestCode":
   singleton from ("All Oxygen Device Codes" DeviceCode

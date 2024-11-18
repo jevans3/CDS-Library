@@ -4,7 +4,7 @@ include FHIRHelpers version '4.0.0' called FHIRHelpers
 include CDSConnectCommonsForFHIRv400 version '1.0.2' called CDS
 include DTRHelpers version '0.1.0' called DTR
 
-codesystem "HCPCS": 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+codesystem "HCPCS": 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
 
 valueset "DiabetesMellitusValueSet": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1219.35'
 valueset "InsulinMedicationValueSet": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1219.85'
@@ -26,7 +26,7 @@ define "DMConfirmedDate": FHIRHelpers."ToDateTime"(DTR.FirstDateConditionRecorde
 
 define "DeviceRequestHcpcsCoding": singleton from (
   ((cast device_request.code as CodeableConcept).coding) coding
-    where coding.system.value = 'https://bluebutton.cms.gov/resources/codesystem/hcpcs'
+    where coding.system.value = 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets'
     return FHIRHelpers."ToCode"(coding))
 define "IsNonContinuousBloodGlucoseMonitorOrdered": "DeviceRequestHcpcsCoding" !~ "S1031"
 
